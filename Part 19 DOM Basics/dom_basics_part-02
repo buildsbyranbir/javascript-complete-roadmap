@@ -1,0 +1,438 @@
+// ======================================================
+// PART 19: DOM BASICS
+// PART 2
+// ======================================================
+
+
+// ======================================================
+// 05. getElementById()
+// ======================================================
+
+// ID diye specific element select korar jonno
+// getElementById() use kora hoy
+
+
+const title = document.getElementById(
+    "title"
+);
+
+console.log(title);
+
+
+// selected element er text dekha
+
+console.log(
+    title.textContent
+);
+
+
+// element er text change kora
+
+title.textContent = "DOM is Easy";
+
+console.log(title);
+
+
+
+// ======================================================
+// getElementById() er sathe practical example
+// ======================================================
+
+const heading = document.getElementById(
+    "title"
+);
+
+heading.textContent = "JavaScript DOM";
+
+
+
+// ======================================================
+// 06. getElementsByClassName()
+// ======================================================
+
+// same class er multiple element select korar jonno
+// getElementsByClassName() use kora hoy
+
+
+const texts = document.getElementsByClassName(
+    "text"
+);
+
+console.log(texts);
+
+
+// koyta element ache
+
+console.log(
+    texts.length
+);
+
+
+// first element
+
+console.log(
+    texts[0]
+);
+
+
+// second element
+
+console.log(
+    texts[1]
+);
+
+
+// first element er text
+
+console.log(
+    texts[0].textContent
+);
+
+
+// second element er text
+
+console.log(
+    texts[1].textContent
+);
+
+
+
+// ======================================================
+// sob element er moddhe loop
+// ======================================================
+
+for (
+    let i = 0;
+    i < texts.length;
+    i++
+) {
+
+    console.log(
+        texts[i].textContent
+    );
+
+}
+
+
+
+// ======================================================
+// selected sob element er text change
+// ======================================================
+
+for (
+    let i = 0;
+    i < texts.length;
+    i++
+) {
+
+    texts[i].textContent =
+        "Text changed by JavaScript";
+
+}
+
+
+
+// ======================================================
+// 07. createElement()
+// ======================================================
+
+// createElement() diye new HTML element create kora hoy
+
+
+const newParagraph = document.createElement(
+    "p"
+);
+
+console.log(
+    newParagraph
+);
+
+
+
+// new element e text add
+
+newParagraph.textContent =
+    "This paragraph was created by JavaScript";
+
+
+// body te add
+
+document.body.appendChild(
+    newParagraph
+);
+
+
+
+// ======================================================
+// new heading create
+// ======================================================
+
+const newHeading = document.createElement(
+    "h2"
+);
+
+newHeading.textContent =
+    "New Heading";
+
+document.body.appendChild(
+    newHeading
+);
+
+
+
+// ======================================================
+// new button create
+// ======================================================
+
+const newButton = document.createElement(
+    "button"
+);
+
+newButton.textContent =
+    "New Button";
+
+document.body.appendChild(
+    newButton
+);
+
+
+
+// ======================================================
+// new div create
+// ======================================================
+
+const newDiv = document.createElement(
+    "div"
+);
+
+newDiv.textContent =
+    "I am a new div";
+
+document.body.appendChild(
+    newDiv
+);
+
+
+
+// ======================================================
+// createElement() + class
+// ======================================================
+
+const card = document.createElement(
+    "div"
+);
+
+card.className = "card";
+
+card.textContent =
+    "This is a card";
+
+document.body.appendChild(
+    card
+);
+
+
+
+// ======================================================
+// createElement() + id
+// ======================================================
+
+const section = document.createElement(
+    "section"
+);
+
+section.id = "main-section";
+
+section.textContent =
+    "Main Section";
+
+document.body.appendChild(
+    section
+);
+
+
+
+// ======================================================
+// createElement() + HTML
+// ======================================================
+
+const userCard = document.createElement(
+    "div"
+);
+
+userCard.innerHTML = `
+    <h2>Rahim</h2>
+    <p>Full Stack Developer</p>
+`;
+
+document.body.appendChild(
+    userCard
+);
+
+
+
+// ======================================================
+// createElement() + multiple elements
+// ======================================================
+
+const list = document.createElement(
+    "ul"
+);
+
+
+const itemOne = document.createElement(
+    "li"
+);
+
+itemOne.textContent =
+    "HTML";
+
+
+const itemTwo = document.createElement(
+    "li"
+);
+
+itemTwo.textContent =
+    "CSS";
+
+
+const itemThree = document.createElement(
+    "li"
+);
+
+itemThree.textContent =
+    "JavaScript";
+
+
+list.appendChild(
+    itemOne
+);
+
+list.appendChild(
+    itemTwo
+);
+
+list.appendChild(
+    itemThree
+);
+
+
+document.body.appendChild(
+    list
+);
+
+
+
+// ======================================================
+// REAL WORLD EXAMPLE
+// ======================================================
+
+
+// HTML e age theke thaka element select
+
+const container = document.querySelector(
+    "body"
+);
+
+
+// new card create
+
+const developerCard =
+    document.createElement("div");
+
+
+// card er HTML
+
+developerCard.innerHTML = `
+
+    <h2>Rahim Ahmed</h2>
+
+    <p>Frontend Developer</p>
+
+    <p>Skills: HTML, CSS, JavaScript</p>
+
+`;
+
+
+// page e add
+
+container.appendChild(
+    developerCard
+);
+
+
+
+// ======================================================
+// FINAL PRACTICE
+// ======================================================
+
+
+// ekta new heading
+
+const finalHeading =
+    document.createElement("h2");
+
+finalHeading.textContent =
+    "My Skills";
+
+
+// ekta list
+
+const skillList =
+    document.createElement("ul");
+
+
+// skill 1
+
+const skillOne =
+    document.createElement("li");
+
+skillOne.textContent =
+    "HTML";
+
+
+// skill 2
+
+const skillTwo =
+    document.createElement("li");
+
+skillTwo.textContent =
+    "CSS";
+
+
+// skill 3
+
+const skillThree =
+    document.createElement("li");
+
+skillThree.textContent =
+    "JavaScript";
+
+
+// list er moddhe skill add
+
+skillList.appendChild(
+    skillOne
+);
+
+skillList.appendChild(
+    skillTwo
+);
+
+skillList.appendChild(
+    skillThree
+);
+
+
+// body te heading add
+
+document.body.appendChild(
+    finalHeading
+);
+
+
+// body te list add
+
+document.body.appendChild(
+    skillList
+);
