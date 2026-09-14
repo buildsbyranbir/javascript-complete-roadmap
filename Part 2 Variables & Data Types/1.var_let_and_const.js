@@ -68,64 +68,172 @@ console.log(name);
 =====================================================
 */
 
+// =====================================================
+// 1. Global Scope
+// =====================================================
 
-// ---------- Global Scope ----------
+// Function-er baire username variable declare kora hoyeche.
+// Tai username Global Scope-e ache.
 
 let username = "Ranbir";
 
+// showUser name ekta function create kora holo.
+
 function showUser() {
+
+    // Function-er vitore Global Scope-er
+    // username variable access kora holo.
+
     console.log(username);
+
+    // Output: Ranbir
+
 }
+
+// Function call kora holo.
+// Ekhon showUser function-er vitore thaka code run hobe.
 
 showUser();
+
+// Function-er baireo username access kora jay,
+// karon username Global Scope-e declare kora hoyeche.
+
 console.log(username);
 
+// Output: Ranbir
 
 
-// ---------- Function Scope ----------
+
+// =====================================================
+// 2. Function Scope
+// =====================================================
+
+// Function-er vitore var diye variable declare korle
+// seta oi function-er Function Scope-e thake.
 
 function testFunction() {
+
+    // number variable-ta function-er vitore declare kora holo.
+
     var number = 100;
+
+    // Function-er vitore number access kora jacche.
+
     console.log(number);
+
+    // Output: 100
+
 }
+
+// Function call kora holo.
+// Ekhon testFunction-er vitore code run hobe.
 
 testFunction();
 
-// console.log(number); 
+// Function-er baire number access kora jabe na,
+// karon number function-er vitore declare kora hoyeche.
+
+// console.log(number);
+
+// Output: ReferenceError
+// number is not defined
 
 
 
-// ---------- Block Scope (let) ----------
+// =====================================================
+// 3. Block Scope (let)
+// =====================================================
+
+// Block holo { } er vitore thaka code.
+// if, for, while er block thakte pare.
+
+// if (true) mane condition true,
+// tai block-er vitore thaka code run hobe.
 
 if (true) {
+
+    // city variable-ta let diye declare kora holo.
+
+    // let Block Scope follow kore.
+    // Tai city shudhu ei { } block-er vitore access kora jabe.
+
     let city = "Dhaka";
+
+    // Block-er vitore city access kora jacche.
+
     console.log(city);
+
+    // Output: Dhaka
+
 }
 
-// console.log(city); 
+// Block-er baire city access kora jabe na,
+// karon city block-er vitore declare kora hoyeche.
+
+// console.log(city);
+
+// Output: ReferenceError
+// city is not defined
 
 
 
-// ---------- Block Scope (const) ----------
+// =====================================================
+// 4. Block Scope (const)
+// =====================================================
+
+// if condition true hole block-er code run hobe.
 
 if (true) {
+
+    // language variable-ta const diye declare kora holo.
+
+    // const-o Block Scope follow kore.
+    // Tai language shudhu ei block-er vitore access kora jabe.
+
     const language = "JavaScript";
+
+    // Block-er vitore language access kora jacche.
+
     console.log(language);
+
+    // Output: JavaScript
+
 }
 
-// console.log(language); 
+// Block-er baire language access kora jabe na,
+// karon language block-er vitore declare kora hoyeche.
+
+// console.log(language);
+
+// Output: ReferenceError
+// language is not defined
 
 
 
-// ---------- var is NOT Block Scope ----------
+// =====================================================
+// 5. var is NOT Block Scope
+// =====================================================
+
+// if condition true hole block-er code run hobe.
 
 if (true) {
+
+    // x variable-ta var diye declare kora holo.
+
+    // Important:
+    // var Block Scope follow kore na.
+    // var Function Scope follow kore.
+
     var x = 500;
+
 }
 
-console.log(x); // 500
+// Ekhon block-er baire x access kora jacche,
+// karon var block-er moddhe atke thake na.
 
+console.log(x);
 
+// Output: 500
 
 /*
 =====================================================
