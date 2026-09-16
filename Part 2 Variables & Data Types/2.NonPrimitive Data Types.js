@@ -18,7 +18,8 @@
 // 1. OBJECT
 // ==================================================
 
-// Object holo key-value pair er collection.
+// Object h
+// olo key-value pair er collection.
 // Ekta object er moddhe related information rakha hoy.
 // Example: user er name, age, country etc.
 
